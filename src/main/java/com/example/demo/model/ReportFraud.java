@@ -3,6 +3,8 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "report_fraud")
 @NoArgsConstructor
@@ -39,4 +41,9 @@ public class ReportFraud {
 
     @Column(name = "generic_ticket_id",nullable = false)
     private Long genericTicket;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private Users user;
+
 }

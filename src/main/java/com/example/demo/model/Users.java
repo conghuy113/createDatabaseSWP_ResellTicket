@@ -67,4 +67,7 @@ public class Users {
 
     @OneToMany(mappedBy = "user")
     private List<Rate> rateList;
+
+    @OneToMany(mappedBy = "user")
+    private List<ReportFraud> reportFraudList;
 }
